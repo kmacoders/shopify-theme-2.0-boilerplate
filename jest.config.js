@@ -18,7 +18,7 @@ module.exports = {
    *  Jest sẽ dựa định dạng này để phát hiện các file cần được testing
    */
   "transform": {
-    "^.+\\.(ts|tsx|vue)$": "ts-jest"
+    "^.+\\.(ts|tsx)$": "ts-jest"
   },
 
   /**

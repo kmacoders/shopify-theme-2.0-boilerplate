@@ -1,7 +1,6 @@
 ## Feature 
 - Stater build dựa trên theme Shopify 2.0 mới [Dawn](https://github.com/Shopify/dawn)
-- Vue 3 + Typescript + Liquid ( Class base with [Vue Class Component](https://class-component.vuejs.org/) + [Vue Propery Decorators](https://github.com/kaorun343/vue-property-decorator)
-- VueX store ( Class base with [Vuex Module Decorators](https://championswimmer.in/vuex-module-decorators/pages/overview.html) )
+- Typescript + Liquid
 - SCSS
 - ESLint + StyleLint
 - Husky + Commit Lint ( check convention bên dưới )

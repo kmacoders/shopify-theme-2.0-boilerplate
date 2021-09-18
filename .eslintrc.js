@@ -2,15 +2,11 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: [
     "@typescript-eslint",
-    // "eslint-comments",
-    // "promise",
-    // "unicorn",
   ],
   extends: [
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:eslint-comments/recommended",
-    'plugin:vue/vue3-recommended'
   ],
   parserOptions: {
     project: './tsconfig.json',
@@ -18,7 +14,7 @@ module.exports = {
   overrides: [
     {
       // enable the rule specifically for TypeScript files
-      "files": ["*.ts", "*.vue"],
+      "files": ["*.ts"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": ["error"]
       }
@@ -44,35 +40,6 @@ module.exports = {
      * Cho phép ngắt dòng ( string dom )
      */
     "operator-linebreak": "off",
-
-    /**
-     * For mutations VueX
-     *
-     * setCart(state, payload) {
-     * state.errorMessage = false;
-     * state.shoppingCart = payload;
-     * return state;
-  },
-     */
-    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
-    "no-shadow": "off",
-    /**
-     * Ignore this vue lifecycle
-     */
-    "class-methods-use-this": [
-      "error",
-      { "exceptMethods": [
-        "beforeCreate",
-        "created",
-        "beforeMount",
-        "mounted",
-        "beforeUpdate",
-        "updated",
-        "beforeDestroy",
-        "destroyed"
-        ]
-      }
-    ],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
 };
