@@ -1,9 +1,9 @@
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const commonPath = require('../common-path');
 
 module.exports = {
-  huwngCopyPlugin:  new CopyPlugin({
+  huwngCopyPlugin: new CopyPlugin({
     patterns: [
       /**
        * Các folder có json, không lấy folder con
@@ -42,7 +42,7 @@ module.exports = {
       {
         from: path.resolve(__dirname, commonPath.themeDevPath, 'assets'),
         to: path.resolve(__dirname, commonPath.outputPath, 'assets'),
-      }
+      },
       // ,
       // /**
       //  * SCSS in section ( inside ./theme folder )
@@ -61,4 +61,3 @@ module.exports = {
     ],
   }),
 };
-

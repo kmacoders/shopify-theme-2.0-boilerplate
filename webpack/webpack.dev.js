@@ -18,9 +18,8 @@ module.exports = {
       /.svg/,
       /.min.*/,
       /.png/,
-      /.gif/
+      /.gif/,
     ],
-    modules: false
+    modules: false,
   },
 };
-

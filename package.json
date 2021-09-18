@@ -45,6 +45,9 @@
     "copy-webpack-plugin": "^6.2.1",
     "css-loader": "^3.2.0",
     "css-minimizer-webpack-plugin": "^1.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "husky": "^4.3.8",
     "jquery": "^3.6.0",
     "jsdoc": "^3.6.6",
@@ -66,5 +69,6 @@
     "webpack-cli": "^3.3.6",
     "webpack-import-glob-loader": "^1.6.3",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "dependencies": {}
 }

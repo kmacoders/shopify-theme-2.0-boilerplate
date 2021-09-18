@@ -1,9 +1,9 @@
-const path = require('path');
-const commonPath = require('./common-path');
+const webpack = require('webpack');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const commonPath = require('./common-path');
 const copyPlugin = require('./common-plugins/copy-plugin');
 const replacePlugin = require('./common-plugins/replace-in-file-plugin');
 
@@ -23,8 +23,8 @@ const hugCommonConfig = {
           {
             loader: 'babel-loader',
           },
-          'webpack-import-glob-loader' /** @see https://www.npmjs.com/package/import-glob-loader */
-        ]
+          'webpack-import-glob-loader', /** @see https://www.npmjs.com/package/import-glob-loader */
+        ],
       },
       {
         test: /\.(s*)css$/,
@@ -50,15 +50,15 @@ const hugCommonConfig = {
               sourceMap: false,
             },
           },
-          'webpack-import-glob-loader' /** @see https://www.npmjs.com/package/import-glob-loader */
+          'webpack-import-glob-loader', /** @see https://www.npmjs.com/package/import-glob-loader */
         ],
-      }
+      },
     ],
   },
   optimization: {
     minimizer: [
       new TerserJSPlugin({}),
-      new OptimizeCSSAssetsPlugin({})
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
   plugins: [
@@ -71,7 +71,11 @@ const hugCommonConfig = {
       files: '**/*.(s(c|a)ss|css)',
       failOnError: false,
       quiet: false,
-      emitErrors: true
+      emitErrors: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
     }),
     copyPlugin.huwngCopyPlugin,
     replacePlugin.huwngReplacePlugin,
@@ -84,12 +88,12 @@ const hugCommonConfig = {
       Styles: commonPath.stylesPath,
       Shopify: commonPath.themeDevPath,
       Types: commonPath.typesPath,
-     }
+    },
   },
   stats: {
     entrypoints: false,
     children: false,
-  }
+  },
 };
 
-module.exports = { hugCommonConfig }
+module.exports = { hugCommonConfig };
