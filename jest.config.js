@@ -1,6 +1,6 @@
 module.exports = {
   "roots": [
-    "<rootDir>/src"
+    "<rootDir>/"
   ],
 
   "setupFilesAfterEnv": ['<rootDir>/jest.setup.ts'],

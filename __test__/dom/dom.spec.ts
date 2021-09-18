@@ -1,4 +1,4 @@
-import { addClass, qs, qsa } from '../../helpers/dom/dom';
+import { addClass, qs, qsa } from '../../src/helpers/dom/dom';
 
 /**
  * @see https://noriste.github.io/reactjsday-2019-testing-course/book/intro-to-react-testing/jest-dom.html
