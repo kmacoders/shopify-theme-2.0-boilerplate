@@ -58,7 +58,7 @@ const FULL_HEADING = {
     ],
     "default": "center"
   }
-  `
+  `,
 };
 
 module.exports = {
@@ -67,10 +67,10 @@ module.exports = {
     test: [/\.liquid/],
     rules: [{
       search: '@HTML_FULL_HEADING',
-      replace: FULL_HEADING.liquid
+      replace: FULL_HEADING.liquid,
     }, {
       search: '@SETTING_FULL_HEADING',
-      replace: FULL_HEADING.jsonSchemaSetting
-    }]
-  }]
-}
+      replace: FULL_HEADING.jsonSchemaSetting,
+    }],
+  }],
+};

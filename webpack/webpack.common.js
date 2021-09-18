@@ -18,7 +18,8 @@ const rioCommonConfig = merge([
   parts.commonOptimize(),
   plugins.extractCss(),
   plugins.styleLint(),
-  plugins.commonPlugin(),
+  plugins.copyFromShopifyToDist(),
+  plugins.replaceLiquid(),
   parts.resolve(),
   parts.commonStats(),
 ]);
