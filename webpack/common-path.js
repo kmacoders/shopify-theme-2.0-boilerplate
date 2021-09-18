@@ -13,7 +13,6 @@ module.exports = {
   helpersPath: path.resolve(__dirname, '../src/helpers'),
   stylesPath: path.resolve(__dirname, '../src/styles'),
   typesPath: path.resolve(__dirname, '../src/types'),
-  vuePath: path.resolve(__dirname, '../src/vue'),
   themeDevPath: path.resolve(__dirname, '../shopify'), // Shopify structure
 
   /**

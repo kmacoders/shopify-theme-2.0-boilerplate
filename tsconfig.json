@@ -25,7 +25,6 @@
       "Helpers/*": [ "./src/helpers/*" ],
       "Styles/*": [ "./src/styles/*" ],
       "Types/*": [ "./src/types/*" ],
-      "Vue/*": [ "src/vue/*" ],
     },
   },
   "exclude": [
@@ -35,9 +34,7 @@
   ],
   "include": [
     "./src/**/*.ts",
-    "./src/**/*.vue",
     "./shopify/**/*.ts",
-    "./shopify/**/*.vue",
     "./jest.setup.ts"
   ],
 }

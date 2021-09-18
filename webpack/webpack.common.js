@@ -3,7 +3,6 @@ const commonPath = require('./common-path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader')
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const copyPlugin = require('./common-plugins/copy-plugin');
 const replacePlugin = require('./common-plugins/replace-in-file-plugin');
@@ -30,20 +29,7 @@ const hugCommonConfig = {
       {
         test: /\.ts?$/,
         loader: 'ts-loader',
-        exclude: /node_modules/,
-        options: {
-          appendTsSuffixTo: [/\.vue$/],
-        },
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-          },
-        },
+        exclude: /node_modules/
       },
       {
         test: /\.(s*)css$/,
@@ -85,7 +71,6 @@ const hugCommonConfig = {
     new MiniCssExtractPlugin({
       filename: 'assets/main.css',
     }),
-    new VueLoaderPlugin(),
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       context: 'src',
@@ -98,15 +83,13 @@ const hugCommonConfig = {
     replacePlugin.huwngReplacePlugin,
   ],
   resolve: {
-    extensions: ['.vue', '.ts', '.js', '.json'],
+    extensions: ['.ts', '.js', '.json'],
     alias: {
-      vue: 'vue/dist/vue.esm-bundler.js',
       Components: commonPath.componentsPath,
       Helpers: commonPath.helpersPath,
       Styles: commonPath.stylesPath,
       Shopify: commonPath.themeDevPath,
       Types: commonPath.typesPath,
-      Vue: commonPath.vuePath,
      }
   },
   stats: {
