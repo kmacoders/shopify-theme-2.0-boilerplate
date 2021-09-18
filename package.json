@@ -1,8 +1,8 @@
 {
-  "name": "xo-boutique",
+  "name": "shopify-theme-2.0-boilerplate",
   "version": "1.0.0",
-  "description": "HungDz",
-  "main": "webpack.common.js",
+  "description": "rio",
+  "main": "webpack.config.js",
   "scripts": {
     "dev": "npm run build -- --env.env=dev",
     "build:prod": "npm run build -- --env.env=prod",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:xopify-themes/xo-boutique.git"
+    "url": "https://github.com/kmacoders/shopify-theme-2.0-boilerplate.git"
   },
   "husky": {
     "hooks": {
@@ -32,9 +32,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/xopify-themes/xo-boutique/-/issues"
+    "url": "https://github.com/kmacoders/shopify-theme-2.0-boilerplate/issues"
   },
-  "homepage": "https://gitlab.com/xopify-themes/xo-boutique",
+  "homepage": "https://github.com/kmacoders/shopify-theme-2.0-boilerplate.git",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -45,13 +45,9 @@
     "@shopify/theme-currency": "^4.1.1",
     "@shopify/theme-predictive-search": "^4.1.1",
     "@testing-library/jest-dom": "^5.11.9",
-    "@types/google.maps": "^3.44.2",
-    "@types/googlemaps": "^3.43.3",
     "@types/jest": "^26.0.20",
-    "@types/swiper": "^5.4.2",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
-    "@vue/compiler-sfc": "^3.1.2",
     "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
@@ -64,7 +60,6 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-vue": "^7.12.1",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "jsdoc": "^3.6.6",
@@ -85,22 +80,10 @@
     "ts-loader": "^7.0.5",
     "typedoc": "^0.20.32",
     "typescript": "^3.9.7",
-    "url-loader": "^2.1.0",
-    "vue-debounce-decorator": "^1.0.1",
-    "vue-loader": "^16.3.0",
-    "vue-style-loader": "^4.1.2",
     "webpack": "^4.38.0",
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^3.3.6",
     "webpack-import-glob-loader": "^1.6.3",
     "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "swiper": "^6.5.1",
-    "vue": "^3.1.2",
-    "vue-class-component": "^7.2.6",
-    "vue-property-decorator": "^9.1.2",
-    "vuex": "^3.6.2",
-    "vuex-module-decorators": "^1.0.1"
   }
 }

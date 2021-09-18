@@ -15,8 +15,6 @@
     "moduleResolution": "node",
     "strict": true,
     "experimentalDecorators": true,
-    "types": ["google.maps"],
-
     /* Config alias for ts */
     "baseUrl": ".",
     "paths": {
