@@ -57,15 +57,14 @@ const hugCommonConfig = {
           },
           'webpack-import-glob-loader' /** @see https://www.npmjs.com/package/import-glob-loader */
         ],
-      },
-      // {
-      //   test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-      //   loader: 'url-loader?limit=100000'
-      // }
+      }
     ],
   },
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [
+      new TerserJSPlugin({}),
+      new OptimizeCSSAssetsPlugin({})
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
