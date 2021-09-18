@@ -9,7 +9,7 @@ const replacePlugin = require('./common-plugins/replace-in-file-plugin');
 
 const hugCommonConfig = {
   name: 'ShopiyThemeStarter',
-  entry: './src/index.ts',
+  entry: './src/index.js',
   output: {
     path: commonPath.outputPath,
     filename: 'assets/app.js',
@@ -25,11 +25,6 @@ const hugCommonConfig = {
           },
           'webpack-import-glob-loader' /** @see https://www.npmjs.com/package/import-glob-loader */
         ]
-      },
-      {
-        test: /\.ts?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
       },
       {
         test: /\.(s*)css$/,
@@ -82,7 +77,7 @@ const hugCommonConfig = {
     replacePlugin.huwngReplacePlugin,
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['.js', '.json'],
     alias: {
       Components: commonPath.componentsPath,
       Helpers: commonPath.helpersPath,
