@@ -1,10 +1,9 @@
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const merge = require('webpack-merge');
+const parts = require('./parts/webpack.parts');
 
-module.exports = {
-  mode: 'production',
-  optimization: {
-    minimizer: [
-      new CssMinimizerPlugin(),
-    ],
-  },
-};
+const rioProdConfig = merge([
+  { mode: 'production' },
+  parts.prodOptimize(),
+]);
+
+module.exports = rioProdConfig;

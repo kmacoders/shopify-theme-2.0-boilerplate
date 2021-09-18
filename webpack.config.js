@@ -1,22 +1,29 @@
 const merge = require('webpack-merge');
-const { hugCommonConfig } = require('./webpack/webpack.common');
+const { mode, analyze } = require('webpack-nano/argv');
+const rioCommonConfig = require('./webpack/webpack.common');
+const rioDevConfig = require('./webpack/webpack.dev');
+const rioProdConfig = require('./webpack/webpack.prod');
+const addons = require('./webpack/addons/webpack.bundleanalyzer');
 
-const addons = (addonsArg) => {
-  console.log(addonsArg);
-  const addons2 = []
-    .concat.apply([], [addonsArg])
-    .filter(Boolean);
+const development = merge([
+  rioDevConfig,
+  analyze && addons.analyze(),
+]);
 
-  return addons2.map((addonName) => require(`./webpack/addons/webpack.${addonName}.js`));
-};
+const production = merge([
+  rioProdConfig,
+  analyze && addons.analyze(),
+]);
 
-const allConfigs = (env) => {
-  console.log(env)
-  console.log(env.addons)
-
-  const envConfig = require(`./webpack/webpack.${env.env}.js`);
-  const allConfig = merge(hugCommonConfig, envConfig, ...addons(env.addons));
-
-  return allConfig;
+const getConfig = (mode) => {
+  console.log('Happy coding, Rio !!!')
+  switch(mode) {
+    case 'development':
+      return merge([rioCommonConfig, development])
+    case 'production':
+      return merge([rioCommonConfig, production])
+    default:
+      throw new Error(`Unknow mode, ${mode}`)
+  }
 }
-module.exports = allConfigs;
+module.exports = getConfig(mode);
