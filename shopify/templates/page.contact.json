@@ -4,10 +4,7 @@
       "type": "main-page"
     },
     "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": ""
-      }
+      "type": "contact-form"
     }
   },
   "order": [

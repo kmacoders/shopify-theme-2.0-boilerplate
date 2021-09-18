@@ -7,9 +7,9 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 749px) {
   .collage-section + .collection-list-section .no-heading {
-    margin-top: calc(-4rem - var(--page-width-margin));
+    margin-top: -4rem;
   }
 }
 
@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 750px) {
   .collection-list-wrapper.no-heading {
-    margin-top: calc(6rem + var(--page-width-margin));
+    margin-top: 6rem;
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .collection-list__item .card--light-border:hover {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.04);
+  border: 0.1rem solid var(--color-foreground-4);
 }
 
 .collection-list__item:only-child .media {

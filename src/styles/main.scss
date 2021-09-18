@@ -1,0 +1,59 @@
+/* All import */
+
+/*
+ * Vendor
+ */
+@import './vendors/reset';
+@import './vendors/variants'; // File chứa variable cho file grid bên dứoi
+@import './vendors/grid'; // Grid BS4
+@import './vendors/normalize'; // Reset CSS
+
+/*
+ * Utils
+ */
+@import './utils/utils-dir';
+
+/*
+ * Pages
+ */
+@import './pages/pages-dir';
+
+/*
+ * Layout
+ */
+@import './layout/layout-dir';
+
+/*
+ * Components
+ */
+@import './components/components-dir';
+
+/*
+ * Snippet
+ */
+ @import './snippet/background-image';
+
+/*
+ * Sections
+ */
+ @import './sections/sections-dir';
+
+/*
+ * Base
+ */
+@import './base/base-dir';
+
+/*
+ * Helpers
+ */
+@import './helpers/helpers-dir';
+
+/* Auto impo@import all scss file from Theme folder  */
+/* Using @see https://www.npmjs.com/package/impo@import-glob-loader */
+@import "../../shopify/**/*.scss";
+
+/*
+ * Code chung
+ */
+@import './general';
+@import './vueGeneral';
