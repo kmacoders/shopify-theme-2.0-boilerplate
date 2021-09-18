@@ -3,7 +3,7 @@ const { mode, analyze } = require('webpack-nano/argv');
 const rioCommonConfig = require('./webpack/webpack.common');
 const rioDevConfig = require('./webpack/webpack.dev');
 const rioProdConfig = require('./webpack/webpack.prod');
-const addons = require('./webpack/addons/webpack.bundleanalyzer');
+const addons = require('./webpack/addons/webpack.addons');
 
 const development = merge([
   rioDevConfig,

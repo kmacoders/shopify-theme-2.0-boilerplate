@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const commonPath = require('../common-path');
 const allMarkup = require('../markup/index');
@@ -89,4 +90,8 @@ exports.replaceLiquid = () => ({
   plugins: [
     new ReplaceInFileWebpackPlugin(allMarkup.allReplace),
   ],
+});
+
+exports.cleanDist = () => ({
+  plugins: [new CleanWebpackPlugin()],
 });
